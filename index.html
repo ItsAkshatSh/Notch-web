@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotchBar - Minimal Media Control</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+        }
+        
+        .glow-text {
+            color: #e0e0e0;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3),
+                         0 0 12px rgba(255, 255, 255, 0.2);
+        }
+        
+        .gradient-border {
+            background: rgba(15, 15, 15, 0.95);
+            position: relative;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+        }
+        
+        .gradient-border:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+        }
+        
+        .blur-bg {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(10, 10, 10, 0.85);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .hover-scale {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-2px);
+        }
+        
+        .custom-button {
+            background: rgba(20, 20, 20, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+        }
+        
+        .custom-button:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+        
+        .icon-glow {
+            color: #d4d4d4;
+            transition: all 0.3s ease;
+        }
+        
+        .icon-glow:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        code {
+            background: rgba(20, 20, 20, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+    <header class="fixed w-full z-50 blur-bg">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center" data-aos="fade-right">
+                <i class="fas fa-music icon-glow text-2xl mr-2"></i>
+                <span class="text-2xl font-bold glow-text">NotchBar</span>
+            </div>
+            <div class="hidden md:flex space-x-8" data-aos="fade-left">
+                <a href="#features" class="hover:text-white transition-colors">Features</a>
+                <a href="#demo" class="hover:text-white transition-colors">Demo</a>
+                <a href="#download" class="hover:text-white transition-colors">Download</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-20 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 glow-text"
+                data-aos="zoom-in"
+                data-aos-duration="1000">
+                Elegant Media Control
+            </h1>
+            <p class="text-xl mb-12 text-gray-400"
+               data-aos="fade-up"
+               data-aos-delay="200">
+                Minimal. Powerful. Beautiful.
+            </p>
+            <div class="hover-scale inline-block"
+                 data-aos="fade-up"
+                 data-aos-delay="400">
+                <a href="#download" class="custom-button inline-block px-8 py-3 rounded-lg text-gray-300 font-semibold">
+                    Download Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 glow-text"
+                data-aos="fade-up">
+                Features
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="gradient-border p-8 hover-scale"
+                     data-aos="fade-up"
+                     data-aos-delay="0">
+                    <i class="fas fa-compact-disc icon-glow text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Universal Control</h3>
+                    <p class="text-gray-400">Control any media player from a single, elegant interface</p>
+                </div>
+                <div class="gradient-border p-8 hover-scale"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+                    <i class="fas fa-feather icon-glow text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Lightweight Design</h3>
+                    <p class="text-gray-400">Minimal resource usage with maximum impact</p>
+                </div>
+                <div class="gradient-border p-8 hover-scale"
+                     data-aos="fade-up"
+                     data-aos-delay="400">
+                    <i class="fas fa-bolt icon-glow text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Smart Animations</h3>
+                    <p class="text-gray-400">Fluid transitions that enhance your experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 glow-text"
+                data-aos="fade-up">
+                See It In Action
+            </h2>
+            <div class="max-w-3xl mx-auto gradient-border p-1"
+                 data-aos="fade-up"
+                 data-aos-delay="200">
+                <div class="bg-[#0a0a0a] rounded-lg overflow-hidden">
+                    <div class="relative w-full" style="padding-top: 56.25%;">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/9a4fFIjWp4Q" 
+                            title="Notch Demo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-400 text-center">Experience seamless media control</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-16 glow-text"
+                data-aos="fade-up">
+                Download NotchBar
+            </h2>
+            <div class="max-w-2xl mx-auto gradient-border p-1"
+                 data-aos="fade-up"
+                 data-aos-delay="200">
+                <div class="bg-[#0a0a0a] p-8">
+                    <div class="flex flex-col items-center space-y-6">
+                        <div class="text-6xl icon-glow">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Windows 10/11</h3>
+                            <p class="text-gray-400 mb-6">Version 1.0.0</p>
+                            <div class="hover-scale inline-block">
+                                <a href="https://drive.google.com/drive/u/0/folders/1i_uUQR8yAEZ6dBlTMFZQMtq9Blx7WueC" class="custom-button inline-block px-8 py-3 rounded-lg text-gray-300 font-semibold">
+                                    Download for Windows
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-2xl mx-auto mt-12"
+                 data-aos="fade-up"
+                 data-aos-delay="400">
+                <h3 class="text-xl font-semibold mb-6">Installation Guide</h3>
+                <div class="gradient-border p-1">
+                    <div class="bg-[#0a0a0a] p-6 rounded-lg text-left">
+                        <ol class="list-decimal list-inside space-y-4 text-gray-400">
+                            <li>Download NotchBar</li>
+                            <li>Install dependencies:
+                                <code class="block p-2 mt-2 rounded text-gray-300">pip install PyQt5 winsdk pywin32</code>
+                            </li>
+                            <li>Launch NotchBar:
+                                <code class="block p-2 mt-2 rounded text-gray-300">python main.py</code>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0"
+                     data-aos="fade-right">
+                    <div class="flex items-center">
+                        <i class="fas fa-music icon-glow text-2xl mr-2"></i>
+                        <span class="text-2xl font-bold glow-text">NotchBar</span>
+                    </div>
+                </div>
+                <div class="flex space-x-6"
+                     data-aos="fade-left">
+                    <a href="https://github.com/Akshatbigman/Notch" class="text-gray-500 hover:text-gray-300 transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-600">
+                <p>&copy; 2024 NotchBar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
